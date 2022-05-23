@@ -20,7 +20,9 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "components": "src/components"
+      "components": ["src/components"],
+      "crypto": ["node_modules/crypto-browserify"],
+      "stream": ["node_modules/stream-browserify"],
     },
     "baseUrl": "./"
   },
