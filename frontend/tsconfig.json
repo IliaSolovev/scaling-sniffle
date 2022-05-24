@@ -21,6 +21,8 @@
     "jsx": "react-jsx",
     "paths": {
       "components": ["src/components"],
+      "pages": ["src/pages"],
+      "stores": ["src/stores"],
       "crypto": ["node_modules/crypto-browserify"],
       "stream": ["node_modules/stream-browserify"],
     },

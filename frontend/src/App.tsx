@@ -1,14 +1,18 @@
 import React from 'react';
 import { Wallet } from 'components';
+import { Link, Routes, Route } from 'react-router-dom';
+import { MintToken } from 'pages';
 
 function App() {
   return (
     <Wallet>
-      <div className="App">
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </div>
+      <nav>
+        <Link to="mint-token">MintToken</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<div>home</div>} />
+        <Route path="mint-token" element={<MintToken />} />
+      </Routes>
     </Wallet>
   );
 }

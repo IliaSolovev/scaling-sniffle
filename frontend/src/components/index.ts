@@ -1,1 +1,1 @@
-export {Wallet} from './wallet';
+export { Wallet } from './wallet';

@@ -10,9 +10,10 @@ import {
 } from '@solana/wallet-adapter-wallets';
 import {
   WalletModalProvider,
-  WalletMultiButton
+  WalletMultiButton,
 } from '@solana/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
+import { networkStore } from 'stores';
 
 // Default styles that can be overridden by your app
 require('@solana/wallet-adapter-react-ui/styles.css');
@@ -23,7 +24,7 @@ interface Props {
 
 export const Wallet: React.FC<Props> = ({ children }) => {
   // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
-  const network = WalletAdapterNetwork.Devnet;
+  const network = networkStore((state) => state.network);
 
   // You can also provide a custom RPC endpoint.
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
@@ -39,7 +40,7 @@ export const Wallet: React.FC<Props> = ({ children }) => {
       new SolflareWalletAdapter({ network }),
       new TorusWalletAdapter(),
     ],
-    [network]
+    [network],
   );
 
   return (

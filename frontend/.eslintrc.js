@@ -22,11 +22,15 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'max-len': [1, { code: 140 }],
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'import/no-unresolved': 0, // because ts already throw error if we can`t resolve path
+    'import/prefer-default-export': 0,
+    'react/function-component-definition': 0,
+    'import/extensions': 0,
     'react/jsx-filename-extension': ['error', { extensions: ['.ts', '.tsx'] }],
   },
 };
