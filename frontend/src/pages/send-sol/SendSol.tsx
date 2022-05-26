@@ -18,7 +18,7 @@ import {
   closeAccount,
 } from '@solana/spl-token';
 import { Button } from '@mui/material';
-import { networkStore } from 'entities';
+import { networkStore } from '@/entities';
 
 export const SendSol = () => {
   const connection = networkStore((state) => state.connection);

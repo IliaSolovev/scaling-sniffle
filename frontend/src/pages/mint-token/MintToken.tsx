@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from '@mui/material';
-import { networkStore } from 'entities';
 import { Keypair, LAMPORTS_PER_SOL, PublicKey } from '@solana/web3.js';
 import {
   Account,
@@ -8,6 +7,7 @@ import {
   getOrCreateAssociatedTokenAccount, mintTo,
   transfer,
 } from '@solana/spl-token';
+import { networkStore } from '@/entities';
 
 export const MintToken = () => {
   const connection = networkStore((state) => state.connection);
