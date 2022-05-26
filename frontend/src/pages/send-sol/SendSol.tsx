@@ -17,8 +17,8 @@ import {
   getOrCreateAssociatedTokenAccount,
   closeAccount,
 } from '@solana/spl-token';
-import { networkStore } from 'stores';
 import { Button } from '@mui/material';
+import { networkStore } from 'entities';
 
 export const SendSol = () => {
   const connection = networkStore((state) => state.connection);

@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import {
   GlowWalletAdapter,
   PhantomWalletAdapter,
@@ -10,10 +9,9 @@ import {
 } from '@solana/wallet-adapter-wallets';
 import {
   WalletModalProvider,
-  WalletMultiButton,
 } from '@solana/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
-import { networkStore } from 'stores';
+import { networkStore } from 'entities';
 
 // Default styles that can be overridden by your app
 require('@solana/wallet-adapter-react-ui/styles.css');
@@ -28,7 +26,7 @@ export const Wallet: React.FC<Props> = ({ children }) => {
 
   // You can also provide a custom RPC endpoint.
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);
-
+  console.log(endpoint);
   // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking and lazy loading --
   // Only the wallets you configure here will be compiled into your application, and only the dependencies
   // of wallets that your users connect to will be loaded.
@@ -47,7 +45,6 @@ export const Wallet: React.FC<Props> = ({ children }) => {
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
-          <WalletMultiButton />
           { children }
         </WalletModalProvider>
       </WalletProvider>
