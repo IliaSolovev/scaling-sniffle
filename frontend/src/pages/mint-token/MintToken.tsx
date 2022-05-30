@@ -7,14 +7,18 @@ import {
   getOrCreateAssociatedTokenAccount, mintTo,
   transfer,
 } from '@solana/spl-token';
-import { networkStore } from '@/entities';
+import {
+  useAnchorWallet, useConnection, useWallet, useLocalStorage,
+} from '@solana/wallet-adapter-react';
 
 export const MintToken = () => {
-  const connection = networkStore((state) => state.connection);
+  const { connection } = useConnection();
+  const { publicKey, connected } = useWallet();
   // Generate a new wallet keypair and airdrop SOL
   const fromWallet = Keypair.generate();
   // Public Key to your Phantom Wallet
-  const toWallet = new PublicKey('Hda8gwvKp2sspGsen6aotGUAEHivmu94a52gtqowxHHW');
+  if (!connected || !publicKey) return <div>Please connect</div>;
+  const toWallet = publicKey;
   let fromTokenAccount: Account;
   let mint: PublicKey;
 
