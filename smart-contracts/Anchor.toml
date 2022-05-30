@@ -1,13 +1,13 @@
 [features]
 seeds = false
 [programs.localnet]
-scaling_sniffle = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+scaling_sniffle = "G5x6SiEJLsccF4k65jtiVLrZrbv96U2ug46A2aHd5GwV"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "/home/tregdor/.config/solana/id.json"
 
 [scripts]
