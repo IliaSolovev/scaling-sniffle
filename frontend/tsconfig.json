@@ -24,6 +24,7 @@
       "@/widgets": ["src/widgets"],
       "@/pages": ["src/pages"],
       "@/entities": ["src/entities"],
+      "@/shared/ui": ["src/shared/ui"],
       "crypto": ["node_modules/crypto-browserify"],
       "stream": ["node_modules/stream-browserify"],
     },

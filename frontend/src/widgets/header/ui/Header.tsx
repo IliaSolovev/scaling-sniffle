@@ -12,6 +12,7 @@ export const Header = () => (
         <Button variant="text" component={Link} to="mint-token">Mint token</Button>
         <Button variant="text" component={Link} to="send-sol">Send sol</Button>
         <Button variant="text" component={Link} to="mint-nft">Mint NFT</Button>
+        <Button variant="text" component={Link} to="mint-metaplex-nft">Mint Metaplex NFT</Button>
       </div>
       <WalletMultiButton />
     </div>

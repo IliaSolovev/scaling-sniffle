@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './tailwind.css';
 import { BrowserRouter } from 'react-router-dom';
 import { Buffer } from 'buffer';
 import { App } from '@/app';
 import reportWebVitals from './reportWebVitals';
+import 'antd/dist/antd.css';
 
 window.Buffer = window.Buffer || Buffer;
 

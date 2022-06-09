@@ -6,6 +6,7 @@ module.exports = function override(config) {
     '@/pages': 'src/pages',
     '@/widgets': 'src/widgets',
     '@/entities': 'src/entities',
+    '@/shared/ui': 'src/shared/ui',
     crypto: 'node_modules/crypto-browserify',
     stream: 'node_modules/stream-browserify',
   })(config);

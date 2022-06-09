@@ -31,6 +31,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'react/function-component-definition': 0,
     'import/extensions': 0,
+    'no-use-before-define': 0,
     'react/jsx-filename-extension': ['error', { extensions: ['.ts', '.tsx'] }],
   },
 };
